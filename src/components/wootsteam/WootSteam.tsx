@@ -10,7 +10,7 @@ const WootSteam = () =>
         <p className="steam-game-title">
             WAKE OUT OF TWILIGHT
         </p>
-        <iframe src="https://store.steampowered.com/widget/1562830/" frameBorder="0" width="646" height="190"></iframe>
+        <iframe title="Wake Out Of Twilight Steam Widget" src="https://store.steampowered.com/widget/1562830/" frameBorder="0" width="646" height="190"></iframe>
     </div>
 </Parallax>;
 
