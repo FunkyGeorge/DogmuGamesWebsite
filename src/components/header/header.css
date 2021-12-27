@@ -1,0 +1,28 @@
+.header-content {
+    max-width: 1200px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: calc(10px + 2vmin);
+    color: white;
+    margin: 0 2em;
+}
+
+.header-social-links {
+    width: 33%;
+    text-align: right;
+}
+
+.header-text {
+    font-size: 20px;
+    width: 33%;
+}
+
+.header-logo {
+    width: 35%;
+}
+
+.header-social-icon {
+    width: 1.2em;
+    margin-left: 0.5em;
+}

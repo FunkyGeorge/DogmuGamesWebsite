@@ -1,0 +1,24 @@
+#footer {
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-top: 15px solid var(--theme-primary);
+    padding-top: 5em;
+    padding-bottom: 8em;
+}
+
+.footer-studio {
+    color: var(--theme-primary);
+    font-size: 1.5em;
+}
+
+.footer-social-icon {
+    width: 2.5em;
+    margin: 0 0.5em;
+}
+
+.footer-steam-link {
+    color: var(--theme-light);
+    margin: 2em 0;
+}

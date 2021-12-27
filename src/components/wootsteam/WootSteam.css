@@ -1,0 +1,7 @@
+.steam-game-title {
+    font-size: 5em;
+    color: var(--theme-light);
+    text-align: center;
+    font-family: 'Montserrat-Bold';
+    margin-bottom: 2em;
+}

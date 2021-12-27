@@ -1,0 +1,75 @@
+.email-signup-block {
+    padding: 4.5em 0;
+    margin-bottom: 5em;
+}
+
+.email-big-text {
+    font-size: 5em;
+    color: var(--theme-light);
+    text-align: center;
+    font-family: 'Montserrat-Bold';
+}
+
+.email-big-text-em {
+    color: var(--theme-primary);
+}
+
+.email-form {
+    display: flex;
+    flex-direction: column;
+    width: 25em;
+    margin: 0 auto;
+}
+
+.email-form-input {
+    margin-bottom: 2em;
+    background-color: transparent;
+    border: 3px solid var(--theme-light);
+    color: var(--theme-light);
+    padding: 10px 20px;
+    font-size: 1.2em;
+}
+
+.email-form-input-name {
+    width: 60%;
+}
+
+.email-form-input-email-field {
+    width: 100%;
+}
+
+.email-form-invalid {
+    border-color: rgb(255, 98, 100);
+}
+
+.email-form-confirmation {
+    color: var(--theme-primary);
+    text-align: center;
+    font-size: 2em;
+}
+
+.email-form-submit {
+    align-self: center;
+    background-color: transparent;
+    border: 3px solid var(--theme-light);
+    color: var(--theme-light);
+    border-radius: 4px;
+    font-size: 1.4em;
+    padding: 10px 30px;
+    cursor: pointer;
+}
+
+.small-text {
+    color: var(--theme-light);
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.5em;
+    margin-bottom: 2em;
+}
+
+.divider {
+    width: 20em;
+    margin: 0 auto;
+    border-bottom: 5px solid var(--theme-light);
+    margin-bottom: 4em;
+}
