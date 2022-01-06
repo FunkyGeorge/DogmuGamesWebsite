@@ -1,58 +1,52 @@
 import React from "react";
-import { Field, Form, Formik } from "formik";
-import axios from "axios";
+import MailchimpSubscribe from "react-mailchimp-subscribe"
 
 import "./EmailSignup.css"
 
-interface IFormValues {
-    FNAME: string;
-    LNAME: string;
-    EMAIL: string;
-    u: string;
-    id: string;
-}
+const formURL = "//dogmu-games.us6.list-manage.com/subscribe/post?u=66e3cb92cf&id=8bf9ae6b56f42d6d478f3901d";
 
-const formURL = "https://dogmu-games.us6.list-manage.com/subscribe/post";
-
-const formIdValues = {
-    "u": "8bf9ae6b56f42d6d478f3901d",
-    "id": "66e3cb92cf"
-};
-
-const initialFormValues: IFormValues = {
-    FNAME: "",
-    LNAME: "",
-    EMAIL: "",
-    ...formIdValues
-};
-
-const onValidateForm = values => {
-    const errors = {};
-
-    if (!values.FNAME) {
-        errors["FNAME"] = "First Name is required";
-    }
-
-    if (!values.LNAME) {
-        errors["LNAME"] = "Last Name is required";
-    }
-
-    if (!values.EMAIL) {
-        errors["EMAIL"] = "Email is required";
-    }
-
-    return errors;
-};
-
-const onSubmitForm = (values, { setSubmitting }) => {
-    axios.post(formURL, values)
-        .then(() => {
-            
-        })
-        .catch(() => {
-            setSubmitting(false);
-        });
-};
+const CustomForm = ({ status, message, onValidated }) => {
+    let email, fname, lname;
+    const submit = () =>
+      email &&
+      fname &&
+      lname &&
+      email.value.indexOf("@") > -1 &&
+      onValidated({
+        EMAIL: email.value,
+        FNAME: fname.value,
+        LNAME: lname.value
+      });
+  
+    return (
+      <div className="email-form">
+        <input
+          className="email-form-input email-form-input-name"
+          ref={node => (fname = node)}
+          type="text"
+          placeholder="First name*"
+        />
+        <input
+          className="email-form-input email-form-input-name"
+          ref={node => (lname = node)}
+          type="text"
+          placeholder="Last name*"
+        />
+        <input
+          className="email-form-input email-form-input-email-field"
+          ref={node => (email = node)}
+          type="email"
+          placeholder="Email*"
+        />
+        <br />
+        {status === "success"
+            ? <p className="email-form-confirmation">Thank you!</p>
+            : <button className="email-form-submit" onClick={submit}>
+                Submit
+                </button>}
+      </div>
+    );
+  };
 
 const EmailSignup = () =>
     <div className="email-signup-block">
@@ -61,26 +55,18 @@ const EmailSignup = () =>
             <p className="small-text">You'll get it first when it is ready</p>
             <div className="divider" />
         </div>
-        <Formik initialValues={initialFormValues}
-            validate={onValidateForm}
-            onSubmit={onSubmitForm}
-        >
-            {({
-                errors,
-                touched,
-                isSubmitting
-            }) =>
-                <Form className="email-form">
-                    <Field className={`email-form-input email-form-input-name ${errors.FNAME && touched.FNAME ? "email-form-invalid" : ""}`} name="FNAME" placeholder="First name*" disabled={!!isSubmitting} />
-                    <Field className={`email-form-input email-form-input-name ${errors.LNAME && touched.LNAME ? "email-form-invalid" : ""}`} name="LNAME" placeholder="Last name*" disabled={!!isSubmitting} />
-                    <Field className={`email-form-input email-form-input-email-field ${errors.EMAIL && touched.EMAIL ? "email-form-invalid" : ""}`} type="email" name="EMAIL" placeholder="Email*" disabled={!!isSubmitting} />
-                    {isSubmitting
-                        ? <p className="email-form-confirmation">Thank you!</p>
-                        : <button className="email-form-submit" type="submit" disabled={isSubmitting}>
-                            Submit
-                        </button>}
-                </Form>}
-        </Formik>
+        <MailchimpSubscribe
+            url={formURL}
+            render={({ subscribe, status, message }) => (
+            <div>
+                <CustomForm
+                    status={status}
+                    message={message}
+                    onValidated={formData => subscribe(formData)}
+                />
+            </div>
+            )}
+        />
     </div>;
 
 export default EmailSignup;
