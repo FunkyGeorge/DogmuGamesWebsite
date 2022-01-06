@@ -3,9 +3,9 @@ import MailchimpSubscribe from "react-mailchimp-subscribe"
 
 import "./EmailSignup.css"
 
-const formURL = "//dogmu-games.us6.list-manage.com/subscribe/post?u=66e3cb92cf&id=8bf9ae6b56f42d6d478f3901d";
+const formURL = "//dogmu-games.us6.list-manage.com/subscribe/post?u=8bf9ae6b56f42d6d478f3901d&id=66e3cb92cf";
 
-const CustomForm = ({ status, message, onValidated }) => {
+const CustomForm = ({ status, onValidated }) => {
     let email, fname, lname;
     const submit = () =>
       email &&
@@ -25,18 +25,21 @@ const CustomForm = ({ status, message, onValidated }) => {
           ref={node => (fname = node)}
           type="text"
           placeholder="First name*"
+          disabled={status === "success"}
         />
         <input
           className="email-form-input email-form-input-name"
           ref={node => (lname = node)}
           type="text"
           placeholder="Last name*"
+          disabled={status === "success"}
         />
         <input
           className="email-form-input email-form-input-email-field"
           ref={node => (email = node)}
           type="email"
           placeholder="Email*"
+          disabled={status === "success"}
         />
         <br />
         {status === "success"
@@ -57,11 +60,10 @@ const EmailSignup = () =>
         </div>
         <MailchimpSubscribe
             url={formURL}
-            render={({ subscribe, status, message }) => (
+            render={({ subscribe, status }) => (
             <div>
                 <CustomForm
                     status={status}
-                    message={message}
                     onValidated={formData => subscribe(formData)}
                 />
             </div>
