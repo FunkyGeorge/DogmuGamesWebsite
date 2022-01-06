@@ -20,5 +20,6 @@
 
 .footer-steam-link {
     color: var(--theme-light);
-    margin: 2em 0;
+    margin: 2em 2em;
+    line-break: anywhere;
 }
