@@ -56,12 +56,12 @@ const EmailSignup = () =>
         <div>
             <h3 className="email-big-text">PLAY THE<br /><span className="email-big-text-em">FREE</span> DEMO</h3>
             <p className="small-text">You'll get it first when it is ready</p>
-            <div className="divider" />
         </div>
         <MailchimpSubscribe
             url={formURL}
             render={({ subscribe, status }) => (
-            <div>
+            <div className="email-form-container">
+                <div className="divider" />
                 <CustomForm
                     status={status}
                     onValidated={formData => subscribe(formData)}

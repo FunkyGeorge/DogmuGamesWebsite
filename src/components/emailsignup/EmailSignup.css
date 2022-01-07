@@ -14,12 +14,16 @@
     color: var(--theme-primary);
 }
 
-.email-form {
-    display: flex;
-    flex-direction: column;
+.email-form-container {
     width: 25em;
     margin: 0 auto;
     padding: 0 2em;
+}
+
+.email-form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
 }
 
 .email-form-input {
@@ -32,11 +36,11 @@
 }
 
 .email-form-input-name {
-    width: 60%;
+    width: 50%;
 }
 
 .email-form-input-email-field {
-    width: 90%;
+    width: 80%;
 }
 
 .email-form-invalid {
@@ -69,7 +73,7 @@
 }
 
 .divider {
-    max-width: 20em;
+    max-width: 18em;
     margin: 0 auto;
     padding: 0 2em;
     border-bottom: 5px solid var(--theme-light);
