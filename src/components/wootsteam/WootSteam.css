@@ -1,5 +1,6 @@
 .steam-game-title {
     font-size: 5em;
+    font-size: calc(100% + 3vw);
     color: var(--theme-light);
     text-align: center;
     font-family: 'Montserrat-Bold';
