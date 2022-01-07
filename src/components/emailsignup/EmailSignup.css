@@ -15,7 +15,7 @@
 }
 
 .email-form-container {
-    width: 25em;
+    max-width: 25em;
     margin: 0 auto;
     padding: 0 2em;
 }
