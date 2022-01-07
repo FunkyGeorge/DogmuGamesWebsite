@@ -3,7 +3,7 @@
     color: var(--theme-light);
     text-align: center;
     font-family: 'Montserrat-Bold';
-    margin: 0 2em 2em 2em;
+    margin: 2em;
 }
 
 .steam-widget-container {
@@ -12,6 +12,7 @@
     max-height: 190px;
     width: 100%;
     height: 190px;
+    margin-bottom: 2em;
 }
 
 .steam-widget {
