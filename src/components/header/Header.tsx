@@ -1,7 +1,7 @@
 import React from "react";
 import './header.css';
 
-const dogmuLogo = require("../../images/Dogmu_Logo_Text.png");
+const dogmuLogo = require("../../images/Dogmu_Logo_Text_transparent.png");
 
 const Header = () =>
     <header>
