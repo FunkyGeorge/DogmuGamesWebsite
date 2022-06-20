@@ -2,7 +2,7 @@ import React from "react";
 import { Parallax } from 'react-parallax';
 import './WootSteam.css';
 
-const wootLogo = require("./../../images/WakeOutOfTwilight_Large_icon.png");
+const wootLogo = require("../../images/screens/screen1.png");
 
 const WootSteam = () =>
 <Parallax blur={0} bgImage={wootLogo} bgImageAlt="Wake Out Of Twilight Big Icon" strength={400}>
