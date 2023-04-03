@@ -17,6 +17,22 @@
     margin-bottom: 2em;
 }
 
+.video-container {
+    width: 57vw;
+    height: 32vw;
+    display: flex;
+    position: relative;
+    /* padding-bottom: 56.25%; */
+}
+
+.video-player {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
 .wishlist-link {
     text-decoration: none;
     color: var(--theme-light);
@@ -28,6 +44,6 @@
 }
 
 .woot-logo {
-    height: 20em;
+    height: 13em;
     opacity: 0.9;
 }
