@@ -1,7 +1,7 @@
 import React from 'react';
 import Header from "./components/header/Header";
 import WootBlock from './components/wootblock/WootBlock';
-import EmailSignup from './components/emailsignup/EmailSignup';
+import HonedByStone from './components/HonedByStone/HonedByStone';
 import WootSteam from './components/wootsteam/WootSteam';
 import Footer from './components/footer/Footer';
 
@@ -12,7 +12,7 @@ function App() {
     <div className="App">
       <Header />
       <WootBlock />
-      <EmailSignup />
+      <HonedByStone />
       <WootSteam />
       <Footer />
     </div>

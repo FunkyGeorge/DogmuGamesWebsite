@@ -1,0 +1,15 @@
+.HBS_container {
+    text-align: center;
+    padding: 4em 2em;
+}
+
+.HBS_container p {
+    margin: 35px auto;
+    font-size: 20px;
+    color: white;
+    max-width: 20em;
+}
+
+.HBS_container span {
+    color: #EF8A4F;
+}
