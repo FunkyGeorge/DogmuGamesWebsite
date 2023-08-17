@@ -4,6 +4,11 @@
     overflow: hidden;
 }
 
+.HBS_container iframe {
+    width: 100% !important;
+    max-width: 700px;
+}
+
 .HBS_container p {
     margin: 35px auto;
     font-size: 20px;
