@@ -1,6 +1,7 @@
 .HBS_container {
     text-align: center;
     padding: 4em 2em;
+    overflow: hidden;
 }
 
 .HBS_container p {
