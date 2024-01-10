@@ -1,4 +1,5 @@
 import React from "react";
+import DiscordSVG from "../../images/icons/icons8-discord.svg";
 import './header.css';
 
 const dogmaLogo = require("../../images/Dogmu_Logo_Text_transparent.png");
@@ -14,6 +15,9 @@ const Header = () =>
                 </a>
                 <a href="https://www.instagram.com/dogmagames" target="_blank" rel="noreferrer">
                     <img className="header-social-icon" src="https://static.wixstatic.com/media/81af6121f84c41a5b4391d7d37fce12a.png" alt="Instagram logo social icon" />
+                </a>
+                <a href="https://discord.gg/3GZPB24bnH" target="_blank" rel="noreferrer" style={{ marginLeft: 1 }}>
+                    <img className="header-social-icon" src={DiscordSVG} alt="Discord logo social icon" />
                 </a>
             </div>
         </div>
