@@ -11,7 +11,7 @@ class GameShowcaseViewModel {
 
     OnLinkPress = (gameLink: string) => {
         return () => {
-            console.log(`Going to ${gameLink}`);
+            window.open(gameLink);
         }
     }
 }
