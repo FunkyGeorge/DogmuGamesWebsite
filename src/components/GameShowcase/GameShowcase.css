@@ -115,4 +115,29 @@
         justify-content: center;
         flex-direction: column;
     }
-  }
+
+    /* .GSC_card .image {
+        height: 200px;
+    } */
+}
+
+@media (max-width: 600px) {
+    .GSC_library {
+        padding: 0;
+    }
+
+    .GSC_card .name {
+        font-size: 28px;
+        margin: 20px 0 0;
+    }
+
+    .GSC_card .image {
+        height: 200px;
+    }
+}
+
+@media (max-width: 450px) {
+    .GSC_card .image {
+        height: 150px;
+    }
+}

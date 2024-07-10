@@ -44,3 +44,12 @@
     height: 13em;
     opacity: 0.9;
 }
+
+@media (max-width: 900px) {
+    .video-player {
+        width: 90vw;
+        height: 49vw;
+        max-width: 900px;
+        min-width: 256px;
+    }
+}
